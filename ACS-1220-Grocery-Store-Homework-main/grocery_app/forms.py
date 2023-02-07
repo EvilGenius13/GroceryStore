@@ -21,8 +21,7 @@ class GroceryItemForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class SignUpForm(FlaskForm):
-    username = StringField('User Name',
-        validators=[DataRequired(), Length(min=3, max=50)])
+    username = StringField('User Name', validators=[DataRequired(), Length(min=3, max=50)])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Sign Up')
 
@@ -32,8 +31,7 @@ class SignUpForm(FlaskForm):
             raise ValidationError('That username is taken. Please choose a different one.')
 
 class LoginForm(FlaskForm):
-    username = StringField('User Name',
-        validators=[DataRequired(), Length(min=3, max=50)])
+    username = StringField('User Name', validators=[DataRequired(), Length(min=3, max=50)])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Log In')
 
